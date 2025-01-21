@@ -1,0 +1,16 @@
+package FileSystem
+
+type FileDescriptor struct {
+	FileType string
+	Nlink    int
+	Size     int
+	Blocks   []int
+	IsOpen   bool
+}
+package FileSystem
+
+type OpenFileDescriptor struct {
+	Id     int
+	Desc   *FileDescriptor
+	Offset int
+}
